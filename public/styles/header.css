@@ -1,0 +1,13 @@
+
+header {
+  height: 400px;
+  width: 100%;
+  margin-top: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgb(253, 194, 83);
+  background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
+}
+

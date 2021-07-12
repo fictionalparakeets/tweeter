@@ -1,0 +1,29 @@
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  height: 120px;
+  width: 100%;
+  background-color: #4056A1;
+  color: #FFFFFF;
+  padding: 2em 1.5em;
+  position: fixed;
+  top: 0;
+}
+
+.icon {
+  display: flex;
+  font-family: 'Bungee', cursive;
+  font-size: 40px;
+}
+
+.compose {
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.compose-arrow {
+  display: flex;
+  justify-content: center;
+  color: rgba(255, 78, 78, 0.836);
+}
