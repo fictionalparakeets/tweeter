@@ -26,11 +26,11 @@ main {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: rgb(253, 194, 83);
-  background-image: url("https://www.transparenttextures.com/patterns/hexellence.png");
+  background-color: #fc5400e3;
   padding-left: 5em;
   padding-right: 5em;
 }
+
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
