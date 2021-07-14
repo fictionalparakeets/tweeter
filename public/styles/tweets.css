@@ -19,10 +19,17 @@
 .tweet-header {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   padding: 5px 10px;
   padding-bottom: 0px;
+}
+
+.name-handle {
+  display: flex;
+  flex-grow: 3;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .tweet-body {
