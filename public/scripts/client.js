@@ -66,7 +66,51 @@ const renderTweets = function(arrayOfTweetObjects) {
 
 $(document).ready(() => {
   console.log('load more tweets script is loaded');
+
+  // const tweetData = '../initial_tweets'
   
   renderTweets(data);
 
+
+  // AJAX POST request that sends the form data to the server.
+
+
+  $( "#create-tweet" ).submit(function( event ) {
+    event.preventDefault();
+    // alert( "Handler for .submit() called." );
+
+    const tweetText = $(event.target).serialize();
+
+    let params = {
+      tweetText,
+      url: "/tweets",
+      method: "POST"
+    }
+    console.log('is something happening');
+
+    $.post('/tweets', tweetText);
+
+
+
+
+    // $.ajax(params)
+    // .then((results)=>{
+    //   const tweet = renderTweets(params)
+    //   data.append(results);
+    // })
+    // .catch((err)=>{
+    //   console.log(`error trying to load more: ${err}`)
+    // })
+
+    
+
+  });
+
+
+
+
+
+
+
 })
+
