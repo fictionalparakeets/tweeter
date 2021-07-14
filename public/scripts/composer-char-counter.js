@@ -1,4 +1,3 @@
-//
 
 
 $(document).ready(function() {
@@ -9,8 +8,15 @@ $(document).ready(function() {
     const currentLength = $(this).val().length;
     const lengthRemaining = 140 - currentLength;
 
+    $('.counter').html(lengthRemaining)
+    
+    if (lengthRemaining < 0) {
+      $('.counter').css("color", "red");
+    } else {
+      $('.counter').css("color", "");
+    }
+    
     // Bad practice. To be changed to accessing it via traversing the dom
-    $('.counter').html(lengthRemaining);
   });
 
 });
