@@ -15,17 +15,16 @@ html {
  */
 
 body {
-  background-color: #8de3af;
+  background-color: #7396ae;
   color: #545149;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
 }
 
 main {
-  /* Temporary border for editing */
-  border: 2px solid red;
+  margin-left: 20%;
+  margin-right: 20%;
 }
-
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions

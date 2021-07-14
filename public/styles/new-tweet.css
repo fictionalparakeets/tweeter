@@ -12,15 +12,12 @@ h2 {
 }
 
 .new-tweet {
-  /* Temporary border for editing */
-  border: 2px solid yellow;
-
   align-self: center;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-bottom: 2em;
-  width: 98%;
+  width: 96%;
 }
 
 .tweet-input {
