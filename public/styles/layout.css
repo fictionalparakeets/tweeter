@@ -16,19 +16,13 @@ html {
 
 body {
   color: #545149;
-  background-color: #f4f1ec;
+  background-color: #8de3af;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
 
 main {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  background-color: #8de3af;
-  padding-left: 5em;
-  padding-right: 5em;
+  border: 2px solid red;
 }
 
 

@@ -1,25 +1,38 @@
-h2 {
+main.container {
+  background-color: beige;
   display: flex;
+  flex-flow: column wrap;
   justify-content: center;
+  align-content: center;
+  width: 60%;
+}
+
+h2 {
+  align-self: center;
 }
 
 .new-tweet {
-  width: 80%;
+  border: 2px solid yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2em;
+  align-self: center;
+  width: 98%;
 }
 
 .tweet-input {
+  align-content: center;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  align-content: center;
   border-bottom: 3px black;
 }
-
 
 .tweet-text-input {
   border: none;
   border-bottom: 3px solid rgb(80, 80, 80);
-  background-color: #8de3af;
+  background-color: beige;
   display: flex;
   height: 2em;
   width: 100%;
@@ -27,7 +40,6 @@ h2 {
 
 .tweet-text-label {
   width: 100%;
-  z-index: 5;
 }
 
 .counter-n-btn {
@@ -39,7 +51,7 @@ h2 {
 .counter {
   font-family: 'Bungee', cursive;
   font-size: 0.75em;
-} 
+}
 
 .btn {
   border-radius: 0;
