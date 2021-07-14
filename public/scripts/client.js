@@ -5,7 +5,7 @@
  */
 
 $(document).ready(() => {
-  console.log('load more tweets script is loaded');
+  // console.log('load more tweets script is loaded');
 
   const createTweetElement = function(dataInput) {
     const { user, content, created_at } = dataInput;
@@ -36,7 +36,7 @@ $(document).ready(() => {
   const renderTweets = function(arrayOfTweetObjects) {
     arrayOfTweetObjects.forEach(tweetObject => {
       const $tweet = createTweetElement(tweetObject);
-      $('#tweets-container').append($tweet);
+      $('#tweets-container').prepend($tweet);
     })
   };
 
@@ -44,18 +44,28 @@ $(document).ready(() => {
   const loadTweets = function() {
     // loaded from http://localhost:8080/tweets
 
-    $(function() {
-      const $button = $('#load-more-posts');
-      $button.on('click', function () {
-        console.log('Button clicked, performing ajax call...');
+    // $(function() {
+    //   const $button = $('#load-more-posts');
+    //   $button.on('click', function () {
+    //     console.log('Button clicked, performing ajax call...');
 
-        $.ajax('/tweets', { method: 'GET' })
+    //     $.ajax('/tweets', { method: 'GET' })
+    //     .then(function (tweets) {
+    //       renderTweets(tweets);
+    //       $button.replaceWith(tweets);
+    //     });
+    //   });
+    // });
+
+
+
+
+    // try it without the button:
+    $.ajax('/tweets', { method: 'GET' })
         .then(function (tweets) {
           renderTweets(tweets);
-          $button.replaceWith(tweets);
         });
-      });
-    });
+
   };
 
   // const tweetData = '../initial_tweets'
@@ -70,9 +80,19 @@ $(document).ready(() => {
     // alert( "Handler for .submit() called." );
 
     const tweetText = $(event.target).serialize();
+    console.log(tweetText);
 
-    $.post('/tweets', tweetText);
+    if (tweetText === "text=") {
+      alert("You can't tweet nothing!");
+    } else if (tweetText.length > 140) {
+      alert("Respect the limitations please!");
+    } else {
+      $.post('/tweets', tweetText);
+
+      loadTweets();
+    }
  
   });
 
 })
+
