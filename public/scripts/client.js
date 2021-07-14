@@ -25,10 +25,9 @@ const data = [
     "content": {
       "text": "Je pense , donc je suis"
     },
-    "created_at": 1461113959088
+    "created_at": 1421113959088
   }
 ];
-
 
 
 const createTweetElement = function(dataInput) {
@@ -56,6 +55,7 @@ const createTweetElement = function(dataInput) {
   return $article.html(html);
 };
 
+
 const renderTweets = function(arrayOfTweetObjects) {
   arrayOfTweetObjects.forEach(tweetObject => {
     const $tweet = createTweetElement(tweetObject);
@@ -66,15 +66,7 @@ const renderTweets = function(arrayOfTweetObjects) {
 
 $(document).ready(() => {
   console.log('load more tweets script is loaded');
-
-
+  
   renderTweets(data);
-
-
-
-  // Moved into renderTweets function:
-  // $('#tweets-container').append($tweet);
-
-
 
 })
