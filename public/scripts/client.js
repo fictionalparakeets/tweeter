@@ -71,25 +71,17 @@ $(document).ready(() => {
     $('#tweet-error').html("");
 
     const tweetText = $(event.target).serialize();
-    // console.log(tweetText);
 
     if (tweetText === "text=") {
 
-      $('#tweet-error').html("You can't tweet nothing!");
-
-      // $('#tweet-error').slideDown( 50000, function() {
-      //   // Animation complete.
-      // });
+      $('#tweet-error').html("Surely you have something to say");
 
     } else if (tweetText.length > 140) {
 
-      $('#tweet-error').html("Respect the limitations please!");
-
-      // $('#tweet-error').slideDown( 900, function() {
-      //   // Animation complete.
-      // });
+      $('#tweet-error').html("Respect the limitations please");
 
     } else {
+
       $.post('/tweets', tweetText);
 
       $.ajax('/tweets', { method: 'GET' })
