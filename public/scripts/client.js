@@ -54,6 +54,8 @@ $(document).ready(() => {
       });
   };
 
+  loadTweets();
+
   
   // AJAX POST request that sends the form data to the server.
   $( "#create-tweet" ).submit(function( event ) {

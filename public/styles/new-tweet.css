@@ -33,8 +33,12 @@ h2 {
   border: none;
   border-bottom: 3px solid rgb(80, 80, 80);
   display: flex;
-  height: 2em;
+  height: 4em;
   width: 100%;
+}
+
+.tweet-text-input:hover {
+  box-shadow: 10px 5px 5px #7396ae;
 }
 
 .tweet-text-label {
