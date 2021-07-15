@@ -5,11 +5,15 @@
  */
 
 $(document).ready(() => {
-  // console.log('load more tweets script is loaded');
 
   const createTweetElement = function(dataInput) {
     const { user, content, created_at } = dataInput;
     const $article = $("<article class=\"tweet-article\">");
+    const escape = function (str) {
+      let div = document.createElement("div");
+      div.appendChild(document.createTextNode(str));
+      return div.innerHTML;
+    };
   
     const html = `
     <header class="tweet-header">
@@ -19,7 +23,7 @@ $(document).ready(() => {
         <span>${user.handle}</span>
       </div>
     </header>
-      <h6 class="tweet-body">${content.text}</h6>
+      <h6 class="tweet-body">${escape(content.text)}</h6>
     <footer class="tweet-footer">
       <p>${timeago.format(created_at)}</p>
       <span>
@@ -44,50 +48,40 @@ $(document).ready(() => {
   const loadTweets = function() {
     // loaded from http://localhost:8080/tweets
 
-    // $(function() {
-    //   const $button = $('#load-more-posts');
-    //   $button.on('click', function () {
-    //     console.log('Button clicked, performing ajax call...');
-
-    //     $.ajax('/tweets', { method: 'GET' })
-    //     .then(function (tweets) {
-    //       renderTweets(tweets);
-    //       $button.replaceWith(tweets);
-    //     });
-    //   });
-    // });
-
-
-
-
-    // try it without the button:
     $.ajax('/tweets', { method: 'GET' })
-        .then(function (tweets) {
-          renderTweets(tweets);
-        });
-
+      .then(function (tweets) {
+        renderTweets(tweets);
+      });
   };
 
-  // const tweetData = '../initial_tweets'
   
-  // renderTweets(data);
-  loadTweets();
-
   // AJAX POST request that sends the form data to the server.
-
   $( "#create-tweet" ).submit(function( event ) {
     event.preventDefault();
     // alert( "Handler for .submit() called." );
 
     const tweetText = $(event.target).serialize();
-    console.log(tweetText);
+    // console.log(tweetText);
 
     if (tweetText === "text=") {
-      alert("You can't tweet nothing!");
+
+      $('#tweet-error').html("You can't tweet nothing!");
+
+      // $('#tweet-error').slideDown( 50000, function() {
+      //   // Animation complete.
+      // });
+
     } else if (tweetText.length > 140) {
-      alert("Respect the limitations please!");
+
+      $('#tweet-error').html("Respect the limitations please!");
+
+      // $('#tweet-error').slideDown( 900, function() {
+      //   // Animation complete.
+      // });
+
     } else {
       $.post('/tweets', tweetText);
+      $('#tweet-error').html("");
 
       loadTweets();
     }
