@@ -21,26 +21,54 @@ body {
   font-size: 24px;
 }
 
-main {
-  margin-left: 20%;
-  margin-right: 20%;
+.header-n-tweets {
+  align-content: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
-
-/*
- * Additional CSS can be defined below or in other CSS files, as per instructions
- */
 
  /* Tweeter logo in nav should have font-family: 'Bungee', cursive; */
 
  /* Responsive Layouts */
 
- 
 @media only screen and (min-width: 1024px) {
-   /* Write CSS rules that target desktop screens and larger
-}
-/* Tablet: minimum width of 768px to maximum width of 1024px */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
-   /* Write Tablet only CSS here */
-}
+  /* DESKTOP ONLY */
+  body {
+    background-color: rgb(243, 243, 227);
+  }
 
+  nav {
+    background-color: #ffb764;
+  }
 
+  .container {
+    min-width: auto;
+  }
+
+  .header-n-tweets {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: auto;
+    padding: 180px 20px;
+  }
+
+  .tweet-container {
+    margin-left: 5px, auto;
+    margin-right: 5px, auto;
+  }
+  
+  .page-header {
+    background-color: aquamarine;
+    margin-top: 0;
+    margin-left: 5px, auto;
+    margin-right: 5px, auto;
+    width: 400px;
+  }
+
+  .tweet-input {
+    padding-top: 0;
+  }
+
+}

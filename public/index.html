@@ -46,7 +46,7 @@
     <nav>
       <span class="icon">tweeter</span>
       <div class="compose">
-        <span class="compose-words"><strong>Write</strong>&nbsp a new tweet</span>
+        <span class="compose-words"><strong>Write</strong> a new tweet</span>
         <div class="compose-arrow">
 
           <i class="compose-arrow fas fa-angle-double-down"></i>
@@ -54,44 +54,46 @@
       </div>
     </nav>
 
-    <header class="page-header">
-      <img src
-      <div>
+    <div class="header-n-tweets">
+
+      <header class="page-header">
+        <div>
           <img src="/images/profile-hex.png"> 
-      </div>
-      <br>
-      <div>
-          <h2>Your Name</h2>
-      </div>
-    </header>
+        </div>
+        <br>
+        <div>
+          <h2>@ProlificTweeter</h2>
+        </div>
+      </header>
 
+    
+      <!-- Page-specific (main) content here -->
+      <main class="container">
 
-    <!-- Page-specific (main) content here -->
-    <main class="container">
+        <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <form id="create-tweet" method="post" action="/tweets">
+            <div class="tweet-input">
+              <label class="tweet-text-label" for="tweet-text"></label>
+              <textarea name="text" id="tweet-text" class="tweet-text-input" placeholder="What are you humming about?"></textarea>
+              <span id="tweet-error"></span>
+            </div>
+            <div class="counter-n-btn">
+              <button type="submit" class="btn">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">
+                <span class="lengthRemaining">140</span>
+              </output>
+            </div>
+          </form>
+        </section>
 
-      <section class="new-tweet">
-        <h2>Compose Tweet</h2>
-        <form id="create-tweet" method="post" action="/tweets">
-          <div class="tweet-input">
-            <label class="tweet-text-label" for="tweet-text"></label>
-            <textarea name="text" id="tweet-text" class="tweet-text-input" placeholder="What are you humming about?"></textarea>
-            <span id="tweet-error"></span>
-          </div>
-          <div class="counter-n-btn">
-            <button type="submit" class="btn">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">
-              <span class="lengthRemaining">140</span>
-            </output>
-          </div>
-        </form>
-      </section>
+        <!-- Container for Tweets -->
+        <section class="tweet-container" id="tweets-container">
+          <!-- Rendered dynamically through JQuery in client.js -->
+        </section>
+        <!-- <button id="load-more-posts">Load more posts</button> -->
 
-      <!-- Container for Tweets -->
-      <section class="tweet-container" id="tweets-container">
-        <!-- Rendered dynamically through JQuery in client.js -->
-      </section>
-      <!-- <button id="load-more-posts">Load more posts</button> -->
-
-    </main>
+      </main>
+    </div>
   </body>
 </html>
