@@ -34,14 +34,13 @@ main {
 
  /* Responsive Layouts */
 
-   /* Tablet: minimum width of 768px to maximum width of 1024px */
-   @media only screen and (min-width: 768px) and (max-width: 1024px) {
-    /* Write Tablet only CSS here */
-  }
+ 
+@media only screen and (min-width: 1024px) {
+   /* Write CSS rules that target desktop screens and larger
+}
+/* Tablet: minimum width of 768px to maximum width of 1024px */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+   /* Write Tablet only CSS here */
+}
 
-  /* Another tablet breakpoint is maximum width of 1024px */
-  @media only screen and (max-width: 1024px) {
-    /* Write CSS rules that target Tablets screen sizes downwards - including smartphones */
-  }
 
-  
