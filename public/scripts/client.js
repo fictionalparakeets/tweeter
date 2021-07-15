@@ -44,10 +44,27 @@ $(document).ready(() => {
     })
   };
 
+  const loadTweets = function() {
+    // loaded from http://localhost:8080/tweets
+
+    $.ajax('/tweets', { method: 'GET' })
+      .then(function (tweets) {
+        renderTweets(tweets);
+      });
+  };
+
+  loadTweets();
 
 
+  const loadLastTweet = function() {
+    $.ajax('/tweets', { method: 'GET' })
+      .then(function (tweets) {
+        const lastTweet = tweets.length - 1;
+        renderTweets([tweets[lastTweet]]);
+    });
+  };
 
-  
+
   // AJAX POST request that sends the form data to the server.
   $( "#create-tweet" ).submit(function( event ) {
     event.preventDefault();
@@ -73,36 +90,15 @@ $(document).ready(() => {
       // });
 
     } else {
-      // $.post('/tweets', tweetText);
+      $.post('/tweets', tweetText);
 
-      $.ajax({
-        type: "POST",
-        url: '/tweets',
-        data: tweetText,
-        success: function(data) {
-          console.log(data);
-          // New tweet currently not showing without reloading page
-          renderTweets([data]);
-        }
-      });
+
+      $.ajax('/tweets', { method: 'GET' })
+        .then(loadLastTweet());
 
     }
     
   });
-
-
-
-
-  const loadTweets = function() {
-    // loaded from http://localhost:8080/tweets
-
-    $.ajax('/tweets', { method: 'GET' })
-      .then(function (tweets) {
-        renderTweets(tweets);
-      });
-  };
-
-  loadTweets();
 
 })
 
