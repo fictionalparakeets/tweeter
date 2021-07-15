@@ -92,7 +92,6 @@ $(document).ready(() => {
     } else {
       $.post('/tweets', tweetText);
 
-
       $.ajax('/tweets', { method: 'GET' })
         .then(loadLastTweet());
 
