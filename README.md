@@ -8,9 +8,9 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of Tablet UI"](https://raw.githubusercontent.com/fictionalparakeets/tweeter/master/public/screenshots/tablet.png)
+!["Screenshot of Tablet UI"](https://raw.githubusercontent.com/fictionalparakeets/tweeter/master/public/docs/tablet.png)
 
-!["Screenshot of Desktop UI"](https://raw.githubusercontent.com/fictionalparakeets/tweeter/master/public/screenshots/desktop.png)
+!["Screenshot of Desktop UI"](https://raw.githubusercontent.com/fictionalparakeets/tweeter/master/public/docs/desktop.png)
 
 ## Getting Started
 
