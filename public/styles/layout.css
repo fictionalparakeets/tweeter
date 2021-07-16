@@ -40,7 +40,7 @@ body {
   }
 
   nav {
-    background-color: #ffb764;
+    background-color: #7396ae;
   }
 
   .container {
@@ -61,7 +61,8 @@ body {
   }
 
   .page-header {
-    background-color: aquamarine;
+    background-color: rgba(20, 102, 0);
+    border-radius: 20px;
     margin-top: 0;
     margin-left: 5px, auto;
     margin-right: 5px, auto;
@@ -70,5 +71,9 @@ body {
 
   .tweet-input {
     padding-top: 0;
+  }
+
+  h2 {
+    color: rgb(243, 243, 227);
   }
 }
