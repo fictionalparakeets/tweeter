@@ -80,6 +80,8 @@ $(document).ready(() => {
 
       $('#tweet-text').val("");
       
+      $('.counter').html(140);
+
     }
     
   });
