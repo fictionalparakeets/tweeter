@@ -53,16 +53,16 @@ main.container {
 }
 
 .counter {
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   font-size: 0.75em;
 }
 
 .btn {
-  background-color: #4056A1;
+  background-color: #4056a1;
   border: 0;
   border-radius: 0;
-  color: #FFFFFF;
-  font-family: 'Bungee', cursive;
+  color: #ffffff;
+  font-family: "Bungee", cursive;
   font-size: 0.75em;
   margin-right: 5px;
   padding-left: 10px;

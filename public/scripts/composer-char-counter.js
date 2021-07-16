@@ -1,5 +1,4 @@
 
-
 $(document).ready(function() {
 
   const textInputField = $("#tweet-text");
@@ -8,7 +7,7 @@ $(document).ready(function() {
     const currentLength = $(this).val().length;
     const lengthRemaining = 140 - currentLength;
 
-    $('.counter').html(lengthRemaining)
+    $('.counter').html(lengthRemaining);
     
     if (lengthRemaining < 0) {
       $('.counter').css("color", "red");
@@ -16,8 +15,6 @@ $(document).ready(function() {
       $('.counter').css("color", "");
     }
     
-    // Bad practice. To be changed to accessing it via traversing the dom
   });
 
 });
-

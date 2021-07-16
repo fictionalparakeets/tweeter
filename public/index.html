@@ -5,7 +5,11 @@
     <title>Tweeter - Home Page</title>
 
     <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+      type="text/css"
+    />
 
     <!-- Internal CSS -->
     <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
@@ -14,17 +18,29 @@
     <link rel="stylesheet" href="/styles/tweets.css" type="text/css" />
 
     <!-- Google Font - Bungee 400 -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Google Font - Source Sans Pro - 600 & 300, and italics of both -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+      rel="stylesheet"
+    />
 
     <!-- Font Awesome - Arrow Symbol in Nav -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
     <!-- App CSS -->
     <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
@@ -34,48 +50,58 @@
 
     <!-- App JS -->
     <script type="text/javascript" src="/scripts/client.js"></script>
-    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+    <script
+      type="text/javascript"
+      src="/scripts/composer-char-counter.js"
+    ></script>
 
     <!-- timeago library -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+      integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    
   </head>
 
   <body>
     <!-- Top nav bar (fixed) -->
     <nav>
       <span class="icon">tweeter</span>
-      <div class="compose">
+      <button class="compose" type="button">
         <span class="compose-words"><strong>Write</strong> a new tweet</span>
         <div class="compose-arrow">
-
           <i class="compose-arrow fas fa-angle-double-down"></i>
         </div>
-      </div>
+      </button>
     </nav>
 
+    <!-- User-specific Header -->
     <div class="header-n-tweets">
-
       <header class="page-header">
         <div>
-          <img src="/images/profile-hex.png"> 
+          <img src="/images/profile-hex.png" />
         </div>
-        <br>
+        <br />
         <div>
           <h2>@ProlificTweeter</h2>
         </div>
       </header>
 
-    
       <!-- Page-specific (main) content here -->
       <main class="container">
-
         <section class="new-tweet">
           <h2>Compose Tweet</h2>
           <form id="create-tweet" method="post" action="/tweets">
             <div class="tweet-input">
               <label class="tweet-text-label" for="tweet-text"></label>
-              <textarea name="text" id="tweet-text" class="tweet-text-input" placeholder="What are you humming about?"></textarea>    
+              <textarea
+                name="text"
+                id="tweet-text"
+                class="tweet-text-input"
+                placeholder="What are you humming about?"
+              ></textarea>
               <span id="tweet-error"></span>
             </div>
             <div class="counter-n-btn">
@@ -89,10 +115,8 @@
 
         <!-- Container for Tweets -->
         <section class="tweet-container" id="tweets-container">
-          <!-- Rendered dynamically through JQuery in client.js -->
+        <!-- Rendered dynamically through JQuery in client.js -->
         </section>
-        <!-- <button id="load-more-posts">Load more posts</button> -->
-
       </main>
     </div>
   </body>

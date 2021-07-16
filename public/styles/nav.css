@@ -1,7 +1,6 @@
-
 nav {
   background-color: rgba(20, 102, 0, 0.685);
-  color: #FFFFFF;
+  color: #ffffff;
   display: flex;
   height: 120px;
   justify-content: space-between;
@@ -13,11 +12,15 @@ nav {
 
 .icon {
   display: flex;
-  font-family: 'Bungee', cursive;
+  font-family: "Bungee", cursive;
   font-size: 1.5em;
 }
 
 .compose {
+  color: inherit;
+  height: 2.5em;
+  border: none;
+  background-color: inherit;
   flex-direction: column;
   flex-wrap: wrap;
 }

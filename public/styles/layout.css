@@ -6,7 +6,9 @@
 html {
   box-sizing: border-box;
 }
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: inherit;
 }
 
@@ -17,7 +19,7 @@ html {
 body {
   background-color: #7396ae;
   color: #545149;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-size: 24px;
 }
 
@@ -28,9 +30,8 @@ body {
   justify-content: center;
 }
 
- /* Tweeter logo in nav should have font-family: 'Bungee', cursive; */
 
- /* Responsive Layouts */
+/* Responsive Layouts */
 
 @media only screen and (min-width: 1024px) {
   /* DESKTOP ONLY */
@@ -58,7 +59,7 @@ body {
     margin-left: 5px, auto;
     margin-right: 5px, auto;
   }
-  
+
   .page-header {
     background-color: aquamarine;
     margin-top: 0;
@@ -70,5 +71,4 @@ body {
   .tweet-input {
     padding-top: 0;
   }
-
 }
