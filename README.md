@@ -1,8 +1,16 @@
 # Tweeter Project
 
+This profect is a work in progress.
+
 Tweeter is a simple, single-page Twitter clone.
 
 This repository is the starter code for the project: Students will fork and clone this repository, then build upon it to practice their HTML, CSS, JS, jQuery and AJAX front-end skills, and their Node, Express and MongoDB back-end skills.
+
+## Screenshots
+
+!["Screenshot of Tablet UI"](https://raw.githubusercontent.com/fictionalparakeets/tweeter/master/public/screenshots/tablet.png)
+
+!["Screenshot of Desktop UI"](https://raw.githubusercontent.com/fictionalparakeets/tweeter/master/public/screenshots/desktop.png)
 
 ## Getting Started
 
