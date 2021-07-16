@@ -1,6 +1,6 @@
 # Tweeter Project
 
-This profect is a work in progress.
+This project is a work in progress.
 
 Tweeter is a simple, single-page Twitter clone.
 
